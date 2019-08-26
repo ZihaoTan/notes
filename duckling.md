@@ -23,7 +23,6 @@ brew install pcre
 cabal-install	haskell-stack	python		sqlite
 gdbm		openssl		readline	xz
 ghc		pcre		sphinx-doc
-
 ```
 根据官方指导，使用stack来编译和运行二进制文件。
 ```
@@ -39,8 +38,13 @@ Listening on http://0.0.0.0:8000
 
 结果如下：
 ```
-[{"body":"tomorrow at eight","start":0,"value":{"values":[{"value":"2019-08-27T08:00:00.000-07:00","grain":"hour","type":"value"},{"value":"2019-08-27T20:00:00.000-07:00","grain":"hour","type":"value"}],"value":"2019-08-27T08:00:00.000-07:00","grain":curl -XPOST http://0.0.0.0:8000/parse --data 'locale=en_GB&text=42€'
-[{"body":"42€","start":0,"value":{"value":42,"type":"value","unit":"EUR"},"end":3,"dim":"amount-of-money","latent":false}]tan:~ tan$ curl -XPOST http://0.0.0.0:'000/parse --data 'locale=zh_CN&text=1秒钟'
+'tomorrow at eight'
+[{"body":"tomorrow at eight","start":0,"value":{"values":[{"value":"2019-08-27T08:00:00.000-07:00","grain":"hour","type":"value"},{"value":"2019-08-27T20:00:00.000-07:00","grain":"hour","type":"value"}],"value":"2019-08-27T08:00:00.000-07:00","grain":"hour","type":"value"},"end":17,"dim":"time","latent":false}]
+
+'42€'
+[{"body":"42€","start":0,"value":{"value":42,"type":"value","unit":"EUR"},"end":3,"dim":"amount-of-money","latent":false}]
+
+'1秒钟'
 [{"body":"1秒钟","start":0,"value":{"second":1,"value":1,"type":"value","unit":"second","normalized":{"value":1,"unit":"second"}},"end":3,"dim":"duration","latent":false}]
 ```
 
