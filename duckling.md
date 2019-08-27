@@ -24,7 +24,7 @@ cabal-install	haskell-stack	python		sqlite
 gdbm		openssl		readline	xz
 ghc		pcre		sphinx-doc
 ```
-根据官方指导，使用stack来编译和运行二进制文件。
+根据官方指导，使用stack来编译和运行二进制文件
 ```
 $ stack build
 ```
@@ -36,7 +36,9 @@ Listening on http://0.0.0.0:8000
 ```
 此时一个最基础的HTTP服务器已经在后台运行了，然后可以通过`curl -XPOST http://0.0.0.0:8000/parse --data 'locale=en_GB&text=tomorrow at eight'`来进行测试。
 
-结果如下：
+`Duckling`支持中文，只需要把`locale`改为`zh_CN`即可。其他语言可以查看[ISO-639-1 standard](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)。
+
+简单调用服务，结果如下：
 ```
 'tomorrow at eight'
 [{"body":"tomorrow at eight","start":0,"value":{"values":[{"value":"2019-08-27T08:00:00.000-07:00","grain":"hour","type":"value"},{"value":"2019-08-27T20:00:00.000-07:00","grain":"hour","type":"value"}],"value":"2019-08-27T08:00:00.000-07:00","grain":"hour","type":"value"},"end":17,"dim":"time","latent":false}]
@@ -48,7 +50,10 @@ Listening on http://0.0.0.0:8000
 [{"body":"1秒钟","start":0,"value":{"second":1,"value":1,"type":"value","unit":"second","normalized":{"value":1,"unit":"second"}},"end":3,"dim":"duration","latent":false}]
 ```
 
-### python-duckling
+## 原理
+`Duckling`项目缺少相关论文的介绍，对于其具体实现原理，官网也没有作任何介绍。不过根据它需要安装`PCRE`(Perl Compatible Regular Expressions)来推断，应该主要是利用正则来实现的。
+
+## python-duckling
 
 ### 安装
 目前还有一个基于`duckling`封装的python包
