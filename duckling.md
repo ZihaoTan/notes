@@ -11,7 +11,7 @@
 
 对于Mac用户，还另外需要`PCRE`这个工具，可以使用`Homebrew`安装
 
-关于`Homebrew`的安装，可以参考[这里](https://github.com/ZihaoTan/notes/blob/master/use_homebrew.md)
+关于`Homebrew`的安装，可以参考[这里](https://github.com/ZihaoTan/notes/blob/master/use_homebrew.md)🍺🍺
 
 继续回到安装duckling上面，安装好homebrew后，可以使用`brew install`需要的包。
 ```
@@ -75,7 +75,7 @@ Listening on http://0.0.0.0:8000
 可见对于已经定义好的dimension能识别的比较好，比如对于手机号码，就算没有像座机号码这种标准格式，也能识别成phone-number。
 
 ## 关于自定义dimension
-`duckling`支持[Custom dimensions](https://github.com/facebook/duckling/blob/master/exe/CustomDimensionExample.hs)。但需要使用`Haskell`语言。
+`duckling`支持[Custom dimensions](https://github.com/facebook/duckling/blob/master/exe/CustomDimensionExample.hs)。但需要使用`Haskell`语言。🤔
 
 ## 原理
 `Duckling`项目缺少相关论文的介绍，对于其具体实现原理，官网也没有作任何介绍。不过根据它需要安装`PCRE`(Perl Compatible Regular Expressions)来推断，应该主要是利用正则来实现的。
