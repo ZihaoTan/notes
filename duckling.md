@@ -65,7 +65,14 @@ Listening on http://0.0.0.0:8000
 
 '1秒钟'
 [{"body":"1秒钟","start":0,"value":{"second":1,"value":1,"type":"value","unit":"second","normalized":{"value":1,"unit":"second"}},"end":3,"dim":"duration","latent":false}]
+
+'电话号码是1388882006'
+[{"body":"1388882006","start":5,"value":{"value":"1388882006"},"end":15,"dim":"phone-number","latent":false},{"body":"1388882006","start":5,"value":{"value":1388882006,"type":"value"},"end":15,"dim":"number","latent":false}]
+
+'电话号码是+86 (020) 1234-45678'
+[{"body":"86","start":6,"value":{"value":"86"},"end":8,"dim":"phone-number","latent":false},{"body":"86","start":6,"value":{"value":86,"type":"value"},"end":8,"dim":"number","latent":false},{"body":"(020) 1234-45678","start":9,"value":{"value":"020123445678"},"end":25,"dim":"phone-number","latent":false}]
 ```
+可见对于已经定义好的dimension能识别的比较好，但对于格式要求比较严格，如手机号识别成number，对于标准的座机号码能识别出为phone-number
 
 ## 原理
 `Duckling`项目缺少相关论文的介绍，对于其具体实现原理，官网也没有作任何介绍。不过根据它需要安装`PCRE`(Perl Compatible Regular Expressions)来推断，应该主要是利用正则来实现的。
