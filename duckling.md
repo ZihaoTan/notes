@@ -38,7 +38,7 @@ Listening on http://0.0.0.0:8000
 
 `Duckling`支持中文，只需要把`locale`改为`zh_CN`即可。其他语言可以查看[ISO-639-1 standard](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)。
 
-支持的dimension如下：
+支持的dimension如下：  
 | Dimension | Example input | Example value output
 | --------- | ------------- | --------------------
 | `AmountOfMoney` | "42€" | `{"value":42,"type":"value","unit":"EUR"}`
