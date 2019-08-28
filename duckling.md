@@ -38,6 +38,23 @@ Listening on http://0.0.0.0:8000
 
 `Duckling`支持中文，只需要把`locale`改为`zh_CN`即可。其他语言可以查看[ISO-639-1 standard](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)。
 
+支持的dimension如下：
+| Dimension | Example input | Example value output
+| --------- | ------------- | --------------------
+| `AmountOfMoney` | "42€" | `{"value":42,"type":"value","unit":"EUR"}`
+| `CreditCardNumber` | "4111-1111-1111-1111" | `{"value":"4111111111111111","issuer":"visa"}`
+| `Distance` | "6 miles" | `{"value":6,"type":"value","unit":"mile"}`
+| `Duration` | "3 mins" | `{"value":3,"minute":3,"unit":"minute","normalized":{"value":180,"unit":"second"}}`
+| `Email` | "duckling-team@fb.com" | `{"value":"duckling-team@fb.com"}`
+| `Numeral` | "eighty eight" | `{"value":88,"type":"value"}`
+| `Ordinal` | "33rd" | `{"value":33,"type":"value"}`
+| `PhoneNumber` | "+1 (650) 123-4567" | `{"value":"(+1) 6501234567"}`
+| `Quantity` | "3 cups of sugar" | `{"value":3,"type":"value","product":"sugar","unit":"cup"}`
+| `Temperature` | "80F" | `{"value":80,"type":"value","unit":"fahrenheit"}`
+| `Time` | "today at 9am" | `{"values":[{"value":"2016-12-14T09:00:00.000-08:00","grain":"hour","type":"value"}],"value":"2016-12-14T09:00:00.000-08:00","grain":"hour","type":"value"}`
+| `Url` | "https://api.wit.ai/message?q=hi" | `{"value":"https://api.wit.ai/message?q=hi","domain":"api.wit.ai"}`
+| `Volume` | "4 gallons" | `{"value":4,"type":"value","unit":"gallon"}`
+
 简单调用服务，结果如下：
 ```
 'tomorrow at eight'
