@@ -38,7 +38,6 @@ Listening on http://0.0.0.0:8000
 
 `Duckling`支持中文，只需要把`locale`改为`zh_CN`即可。其他语言可以查看[ISO-639-1 standard](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)。
 
-支持的dimension如下：  
 | Dimension | Example input | Example value output
 | --------- | ------------- | --------------------
 | `AmountOfMoney` | "42€" | `{"value":42,"type":"value","unit":"EUR"}`
@@ -72,7 +71,7 @@ Listening on http://0.0.0.0:8000
 '电话号码是+86 (020) 1234-45678'
 [{"body":"86","start":6,"value":{"value":"86"},"end":8,"dim":"phone-number","latent":false},{"body":"86","start":6,"value":{"value":86,"type":"value"},"end":8,"dim":"number","latent":false},{"body":"(020) 1234-45678","start":9,"value":{"value":"020123445678"},"end":25,"dim":"phone-number","latent":false}]
 ```
-可见对于已经定义好的dimension能识别的比较好，但对于格式要求比较严格，如手机号识别成number，对于标准的座机号码能识别出为phone-number
+可见对于已经定义好的dimension能识别的比较好
 
 ## 原理
 `Duckling`项目缺少相关论文的介绍，对于其具体实现原理，官网也没有作任何介绍。不过根据它需要安装`PCRE`(Perl Compatible Regular Expressions)来推断，应该主要是利用正则来实现的。
