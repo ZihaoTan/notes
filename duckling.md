@@ -80,8 +80,7 @@ Listening on http://0.0.0.0:8000
 ## 原理
 `Duckling`项目缺少相关论文的介绍，对于其具体实现原理，官网也没有作任何介绍。不过根据它需要安装`PCRE`(Perl Compatible Regular Expressions)来推断，应该主要是利用正则来实现的。
 
-## python-duckling
-
+# python-duckling
 ## 安装
 目前还有一个基于`duckling`封装的python包
 
