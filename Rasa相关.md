@@ -1,4 +1,4 @@
-#Rasa UI
+# Rasa UI
 Rasa UI提供一个网页界面来管理Rasa中的NLU和CORE部件，除此之外还提供训练、加载模型；检测使用；浏览日志等功能。
 
 ## 如何开始使用
@@ -61,7 +61,7 @@ If you prefer a graphical app, check out the list of GUI tools.
 If you get an error saying “the identity of the developer cannot be confirmed”, 
 please make sure you didn’t skip step 2. (more info)
 ```
-由于之前用`homebrew`安装过psql，所以会提示`5432`端口别占用，因此我改成了`5433`。
+由于之前用`homebrew`安装过psql，所以会提示`5432`端口会被占用，因此我改成了`5433`。
 
 使用`psql -p 5433 -h localhost`发现可以登陆psql控制台。
 
@@ -81,11 +81,6 @@ wget https://raw.githubusercontent.com/paschmann/rasa-ui/master/resources/dbcrea
 ```
 在翻墙状态下用浏览器打开网页也是出现404错误
 
-#### 使用homebrew安装
-1. brew安装
-```
-brew install postgresql
-```
 
 ### 运行
 在rasa-ui文件夹使用npm start来启动服务器
