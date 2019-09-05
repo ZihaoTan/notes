@@ -38,7 +38,13 @@ npm start
 做完这一步之后在[http://localhost:5001](http://localhost:5001)可以查看到。
 
 运行的界面如下：
-![Training](https://github.com/ZihaoTan/notes/blob/master/img/UI-Training.png)
+训练页面
+![](https://github.com/ZihaoTan/notes/blob/master/img/UI-Training.png)
+
+
+查看训练好模型界面：
+![Models](https://github.com/ZihaoTan/notes/blob/master/img/UI-models.png)
+
 
 # Rasa X
 ## 如何开始使用
@@ -50,3 +56,9 @@ npm start
 ```
 rasa x
 ```
+### 主界面
+![](https://github.com/ZihaoTan/notes/blob/master/img/X-mainpage.png)
+
+![](https://github.com/ZihaoTan/notes/blob/master/img/X-model.png)
+
+可以看到，Rasa X同样也支持重新训练、加载模型等功能，并且直接提供一个和机器人对话等界面。
