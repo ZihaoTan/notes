@@ -81,5 +81,5 @@ rasa x
 - Using it is totally optional. If you don’t want to, you can just use Rasa on its own.
 
 ## 简单总结
-1. 两者功能实际上大同小异，有一个比较显著的差别是在聊天的界面，对于用户的输入，Rasa UI会返回当前对话是属于不同意图的置信度，而Rasa X则会直接返回机器的回答
+1. 两者功能实际上大同小异，有一个比较显著的差别是在聊天的界面，对于用户的输入，Rasa UI会返回当前对话是属于不同意图的置信度，而Rasa X则会直接返回机器的回答。
 2. 由于Rasa X和Rasa UI的高度相似，使得后者处于一个比较尴尬的局面。因为Rasa UI是一个个人维护的项目，会出现更新不及时的情况，而且Rasa本身的更新也比较快，这就导致相关的工具适配的时效性。因此还是推荐使用官方捆绑的Rasa X。
