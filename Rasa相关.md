@@ -38,7 +38,7 @@ npm start
 做完这一步之后在[http://localhost:5001](http://localhost:5001)可以查看到。
 
 运行的界面如下：
-训练页面
+训练页面：
 ![](https://github.com/ZihaoTan/notes/blob/master/img/UI-Training.png)
 
 
@@ -56,9 +56,30 @@ npm start
 ```
 rasa x
 ```
-### 主界面
+### 界面
+主界面：
 ![](https://github.com/ZihaoTan/notes/blob/master/img/X-mainpage.png)
 
+模型页面：
 ![](https://github.com/ZihaoTan/notes/blob/master/img/X-model.png)
 
 可以看到，Rasa X同样也支持重新训练、加载模型等功能，并且直接提供一个和机器人对话等界面。
+
+# Rasa-UI和Rasa-X的对比
+先奉上两者的官方介绍
+## Rasa-UI
+- UI for creating and managing training data - Examples, Intents, Entities, Synonyms, Regex, Stories, Actions, Responses
+- Manage multiple bots from a single UI/instance of Rasa UI
+- Create, manage and load different versions of your models for testing and optimizing
+- Log requests for usage tracking, history and improvements to your models
+- Easily execute intent parsing using different models
+- Data is stored in a SQLite DB for backing up/sharing
+- Can be used with or without a Rasa backend to manage your training data
+
+## Rasa X
+- Rasa X is a tool to learn from real conversations and improve your assistant.
+- Using it is totally optional. If you don’t want to, you can just use Rasa on its own.
+
+## 简单总结
+1. 两者功能实际上大同小异，有一个比较显著的差别是在聊天的界面，对于用户的输入，Rasa UI会返回当前对话是属于不同意图的置信度，而Rasa X则会直接返回机器的回答
+2. 由于Rasa X和Rasa UI的高度相似，使得后者处于一个比较尴尬的局面。因为Rasa UI是一个个人维护的项目，会出现更新不及时的情况，而且Rasa本身的更新也比较快，这就导致相关的工具适配的时效性。因此还是推荐使用官方捆绑的Rasa X。
