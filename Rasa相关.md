@@ -38,7 +38,7 @@ npm start
 做完这一步之后在[http://localhost:5001](http://localhost:5001)可以查看到。
 
 运行的界面如下：
-
+![Training](https://github.com/ZihaoTan/notes/blob/master/img/UI-Training.png)
 
 # Rasa X
 ## 如何开始使用
