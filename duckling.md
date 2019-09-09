@@ -1,6 +1,6 @@
 # Duckling
 ## 简介
-`Duckling`可以对文本进行语法分析，并从中得到结构话的数据。`Duckling`是一个基于Haskell的库。
+`Duckling`可以对文本进行语法分析，并从中得到结构化的数据。`Duckling`是一个基于Haskell的库。
 ```
 "the first Tuesday of October"
 => {"value":"2017-10-03T00:00:00.000-07:00","grain":"day"}
